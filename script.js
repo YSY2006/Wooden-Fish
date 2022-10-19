@@ -12,13 +12,13 @@
         y = event.clientY - f; // 纵坐标
         c = "black"; // 颜色
         a = 0.8; // 透明度
-        s = 1.05; // 放大缩小
+        s = 1.1; // 放大缩小
     var timer = setInterval(function () { //添加定时器
         if (a <= 0) {
             document.body.removeChild(heart);
             clearInterval(timer);
         } else {
-            heart.style.cssText = "font-size:15px;cursor: url(cursor.cur), pointer; position: fixed;color:" +
+            heart.style.cssText = "font-size:17px;cursor: url(cursor.cur), pointer; position: fixed;color:" +
                 c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
                 s + ");";
             y-=1;
@@ -28,10 +28,9 @@
     }, 10)
 
     
-    // let pic=document.getElementById("muyu");
-    // pic.onmouseover=function(){        
-    //     this.style="transform:scale(1);transition: all 0.15s linear;";
-    // }
+    playmusic();
+        
+    
     // pic.onmousedown=function(){        
     //     this.style="transform:scale(0.875);transition: all 0.15s linear;";
     // }
@@ -39,20 +38,19 @@
     //     this.style="transform:scale(1);transition: all 0.15s linear;";
     // }     
 
+       
+   
+    
+    
+    
+    
+}
+
+function playmusic(){
     //声音
-    var audio = document.getElementById('music'); 
-    if(audio.paused){
-        audio.play();
-    }
-    else{        
-        audio.currentTime=0;
-        audio.play();
-        
-    }          
-    
-    
-    
-    
+    var audio = document.getElementById('music');     
+    audio.currentTime=0;
+    audio.play();
     
 }
 
