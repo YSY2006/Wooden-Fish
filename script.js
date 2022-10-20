@@ -30,10 +30,14 @@
     
     playmusic();
         
-    
-    // pic.onmousedown=function(){        
-    //     this.style="transform:scale(0.875);transition: all 0.15s linear;";
-    // }
+    var pic=document.getElementById("muyu");
+    pic.onmouseup=function(){        
+        this.style="transform:scale(1);transition: all 0.15s linear;";
+    }
+    pic.onmousedown=function(){        
+        this.style="transform:scale(0.875);transition: all 0.15s linear;";
+    }
+   
     // pic.onmouseleave=function(){        
     //     this.style="transform:scale(1);transition: all 0.15s linear;";
     // }     

@@ -9,43 +9,47 @@ body{
 } */
 
 .image{
-    width: 300px;
-    height: 245px;
+    /* width: 300px;
+    height: 245px; */
+    display: block;
+    height: auto;
+    max-height:  100%;
     position: absolute; 
     left:50%;
     top: 50%; 
-    margin-left: -125px;
-    margin-top: -135px;      
+    margin-left: -150px;
+    margin-top: -30px;      
     
     cursor: url(cursor.cur), pointer;  
 }
 
-.image:hover{
-    transform: scale(0.9);
-    transition: all 0.2s linear;
-}
+/* .image:hover{
+    transform: scale(0.875);
+    transition: all 0.15s linear;
+    
+} */
 
-.merits{
-    color: white;    
+.textbox{
+    width: 200px;
+    height: 50px;
     position: absolute; 
     left:50%;
-    top: 50%; 
-    margin-left: -20px;
-    margin-top: 135px;
-    font-size: 20px;
-    font-style: italic;  
+    top: 10%; 
+    margin-left: -285px;
+    margin-top: 0px;  
+    
 }
 
 #number{
     color: white;    
-    position: absolute; 
-    left:50%;
-    top: 50%; 
-    margin-left: 45px;
-    margin-top: 136px;
-    font-size: 20px;
+    text-align:center;
+    font-size: 50px;
     font-style: italic;
     background-color: black;  
-    border-style: none;
-    
+    border-style: none;    
+}
+
+.imagebox{
+    height:245;
+    width: 300;
 }
