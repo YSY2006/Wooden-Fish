@@ -29,14 +29,8 @@
 
     
     playmusic();
-        
-    var pic=document.getElementById("muyu");
-    pic.onmouseup=function(){        
-        this.style="transform:scale(1);transition: all 0.15s linear;";
-    }
-    pic.onmousedown=function(){        
-        this.style="transform:scale(0.875);transition: all 0.15s linear;";
-    }
+    transpic();    
+    add();
    
     // pic.onmouseleave=function(){        
     //     this.style="transform:scale(1);transition: all 0.15s linear;";
@@ -50,14 +44,33 @@
     
 }
 
-function playmusic(){
-    //声音
+//图片变化
+function transpic(){
+    var pic=document.getElementById("muyu");
+    pic.onmouseup=function(){        
+        this.style="transform:scale(1);transition: all 0.15s linear;";
+    }
+    pic.onmousedown=function(){        
+        this.style="transform:scale(0.875);transition: all 0.05s linear;";
+    }
+    pic.onmouseover=function(){        
+        this.style="transform:scale(1);transition: all 0.15s linear;";
+    }
+    
+    pic.ontouchstart=function(){        
+        this.style="transform:scale(0.875);transition: all 0.15s linear;";
+    }
+    pic.ontouchend=function(){        
+        this.style="transform:scale(1);transition: all 0.15s linear;";
+    }
+}
+//声音
+function playmusic(){    
     var audio = document.getElementById('music');     
     audio.currentTime=0;
-    audio.play();
-    
+    audio.play();    
 }
-
+//数字
 function add(){
     var x=document.getElementById("number");
     var a=x.value;
